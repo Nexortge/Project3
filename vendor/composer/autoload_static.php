@@ -86,6 +86,7 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\LaravelPackageTools\\' => 27,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
@@ -176,6 +177,8 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         ),
         'A' => 
         array (
+            'Askdkc\\Breezejp\\Database\\Factories\\' => 35,
+            'Askdkc\\Breezejp\\' => 16,
             'App\\' => 4,
         ),
     );
@@ -316,6 +319,10 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
@@ -526,6 +533,14 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Askdkc\\Breezejp\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askdkc/breezejp/database/factories',
+        ),
+        'Askdkc\\Breezejp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/askdkc/breezejp/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -537,6 +552,7 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -547,12 +563,18 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\MenuModel' => __DIR__ . '/../..' . '/app/Models/MenuModel.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'Askdkc\\Breezejp\\Breezejp' => __DIR__ . '/..' . '/askdkc/breezejp/src/Breezejp.php',
+        'Askdkc\\Breezejp\\BreezejpServiceProvider' => __DIR__ . '/..' . '/askdkc/breezejp/src/BreezejpServiceProvider.php',
+        'Askdkc\\Breezejp\\Commands\\BreezejpCommand' => __DIR__ . '/..' . '/askdkc/breezejp/src/Commands/BreezejpCommand.php',
+        'Askdkc\\Breezejp\\Commands\\InstallLanguageSwitcher' => __DIR__ . '/..' . '/askdkc/breezejp/src/Commands/InstallLanguageSwitcher.php',
+        'Askdkc\\Breezejp\\Facades\\Breezejp' => __DIR__ . '/..' . '/askdkc/breezejp/src/Facades/Breezejp.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -665,6 +687,7 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\MenuSeeder' => __DIR__ . '/../..' . '/database/seeders/MenuSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
@@ -5496,6 +5519,10 @@ class ComposerStaticInitc7b51c5279440b8c21f942ebfc6f530c
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\LaravelPackageTools\\Commands\\InstallCommand' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Commands/InstallCommand.php',
+        'Spatie\\LaravelPackageTools\\Exceptions\\InvalidPackage' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Exceptions/InvalidPackage.php',
+        'Spatie\\LaravelPackageTools\\Package' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Package.php',
+        'Spatie\\LaravelPackageTools\\PackageServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/PackageServiceProvider.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
