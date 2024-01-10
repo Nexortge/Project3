@@ -11,15 +11,27 @@ return new class extends Migration
      */
     public function up(): void
     {
-            Schema::create('menu', function (Blueprint $table) {
+            Schema::create('bestelling', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('cost');
-            $table->string('info');
-            $table->timestamps();
+            $table->date('date');
+            $table->string('status');
         });
-            Schema::create('people', function (Blueprint $table){
+            Schema::create('klant', function (Blueprint $table){
                 $table->id();
+                $table->string('name');
+                $table->string('email');
+                $table->string('telefoonnummer');
+                $table->string('woonplaats');
+                $table->string('adres');
+            });
+            Schema::create('ingredient', function (Blueprint $table){
+                $table->id();
+                $table->string('name');
+                $table->integer('cost');
+            });
+            Schema::create('pizza', function (Blueprint $table){
+                $table->id();
+                $table->string('name');
             });
     }
 
