@@ -6,6 +6,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Menu</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <?php
+            $session = session()->get('user');
+        ?>
     </head>
     <body class="font-sans antialiased text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
     </body>
