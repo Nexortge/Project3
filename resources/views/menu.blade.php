@@ -7,7 +7,8 @@
         <title>Menu</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <?php
-            $session = session()->get('user');
+            session_start();
+            $user = $_SESSION['user'];
         ?>
     </head>
     <body class="font-sans antialiased text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
