@@ -7,14 +7,7 @@
         <title>Localhost</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
-    <div>
-<div class="flex flex-col items-center justify-center min-h-screen">
-            <div class="flex flex-col items-center justify-center">
-                <h1 class="text-6xl font-bold">Laravel</h1>
-                <p class="mt-4 text-xl">with Vite, Tailwind CSS, and Alpine.js</p>
-            </div>
-        </div>
-    </div>
+    <body class="font-sans">
+    @include('includes.header')
     </body>
 </html>
