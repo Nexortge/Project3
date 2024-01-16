@@ -33,6 +33,12 @@ return new class extends Migration
                 $table->id();
                 $table->string('name');
             });
+            Schema::create('cart', function (Blueprint $table){
+                $table->id();
+                $table->string('name');
+                $table->integer('price');
+                $table->integer('quantity');
+            });
     }
 
     /**
