@@ -9,6 +9,8 @@
     </head>
     <body class="comic-sans bg-yellow-50">
     @include('includes.header')
+    <p>van je bie boe ba bananana</p>
+
     @include('includes.footer')
     </body>
 </html>
