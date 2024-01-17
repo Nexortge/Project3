@@ -7,7 +7,8 @@
         <title>Localhost</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="comic-sans">
+    <body class="comic-sans bg-yellow-50">
     @include('includes.header')
+    @include('includes.footer')
     </body>
 </html>
