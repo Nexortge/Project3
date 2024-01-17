@@ -1,6 +1,6 @@
 <div class="flex h-40 bg-red-400 justify-between items-center">
     <img class="h-full" src="{{asset('assets/stonks-pizza-removebg-preview.png')}}" alt="LOGO">
-    <p class=" text-xl w-80 sm:text-5xl text-center text-orange-200">Stonks Pizza</p>
+    <p class=" text-xl w-[128vmin] sm:text-7xl text-center text-orange-200">Stonks Pizza</p>
     <a href="https://google.nl" class="w-48 flex flex-col items-center">
         <svg width="56" height="60" viewBox="0 0 56 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 12H39C40.1 12 41 11.1 41 10V6C41 2.7 38.3 0 35 0H21C17.7 0 15 2.7 15 6V10C15 11.1 15.9 12 17 12Z" fill="#FED9B7"/>
