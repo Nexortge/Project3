@@ -1,11 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@layer components {
-  .comic-sans {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-
-  }
-}
