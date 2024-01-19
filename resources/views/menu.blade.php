@@ -13,10 +13,26 @@
             <img class="w-80 h-80 left-[608px] top-0 absolute" src="https://via.placeholder.com/320x320" />
             <img class="w-80 h-80 left-[1216px] top-0 absolute" src="https://via.placeholder.com/320x320" />
             <img class="w-80 h-80 left-[1824px] top-0 absolute" src="https://via.placeholder.com/320x320" />
-            <div class="w-[307px] left-0 top-[338px] absolute"><span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Pepperoni<br/></span><span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh meat!<br/></span><span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span></div>
-            <div class="w-80 left-[608px] top-[338px] absolute"><span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Green stuff<br/></span><span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh green stuff!<br/></span><span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span></div>
-            <div class="w-80 left-[1216px] top-[338px] absolute"><span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Mark<br/></span><span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">King of the nether!<br/></span><span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">19000.00 eur</span></div>
-            <div class="w-80 left-[1824px] top-[338px] absolute"><span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Dough ball<br/></span><span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh dough!<br/></span><span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">8.00 eur</span></div>
+            <div class="w-[307px] left-0 top-[338px] absolute">
+                <span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Pepperoni<br/></span>
+                <span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh meat!<br/></span>
+                <span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span>
+            </div>
+            <div class="w-80 left-[608px] top-[338px] absolute">
+                <span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Green stuff<br/></span>
+                <span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh green stuff!<br/></span>
+                <span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span>
+            </div>
+            <div class="w-80 left-[1216px] top-[338px] absolute">
+                <span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Mark<br/></span>
+                <span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">King of the nether!<br/></span>
+                <span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">19000.00 eur</span>
+            </div>
+            <div class="w-80 left-[1824px] top-[338px] absolute">
+                <span class="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Dough ball<br/></span>
+                <span class="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh dough!<br/></span>
+                <span class="text-red-400 text-xl font-bold font-['Comic Sans MS']">8.00 eur</span>
+            </div>
         </div>
     </div>
 @endsection
