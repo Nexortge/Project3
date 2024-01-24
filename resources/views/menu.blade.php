@@ -12,12 +12,8 @@
     <div class="flex flex-row-reverse">
         <div class="absolute bg-orange-300 w-[196vmin] h-[60vmin] z-10 self-center right-12 rounded text-red-400">
             <div class="p-4 flex flex-col">
-                <!--div>
-                    <span class="text-red-400 font-bold">Margherita</span>
-                    <span class="text-red-400 font-normal font-['Comic Sans MS']"> - tomato sauce, mozzarella, fresh tomatoes and basil.</span>
-                </div-->
                 <div class="w-[60vmin] h-[50vmin] relative">
-                    <img class="w-[25vmin] h-[25vmin] left-[15vmin] top-0 absolute" src="https://via.placeholder.com/269x256" />
+                    <img class="w-[25vmin] h-[25vmin] left-[15vmin] top-0 absolute" src="{{$pizza->image_path}}" />
                     <img class="w-[25vmin] h-[25vmin] left-[65vmin] top-0 absolute" src="https://via.placeholder.com/279x256" />
                     <img class="w-[25vmin] h-[25vmin] left-[110vmin] top-0 absolute" src="https://via.placeholder.com/247x256" />
                     <img class="w-[25vmin] h-[25vmin] left-[155vmin] top-0 absolute" src="https://via.placeholder.com/276x256" />

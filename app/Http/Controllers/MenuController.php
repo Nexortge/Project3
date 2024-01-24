@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pizza;
+use App\Models\Ingredient;
 
 class MenuController extends Controller
 {
@@ -13,7 +15,9 @@ class MenuController extends Controller
 
     public function show()
     {
-        return view('menu');
+        $pizza = Pizza::all();
+//        dd($pizza);
+        return view('menu', ['pizza' => $pizza]);
     }
 
     public function create()
