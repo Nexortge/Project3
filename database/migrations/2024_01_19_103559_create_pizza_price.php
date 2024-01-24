@@ -17,7 +17,7 @@ return new class extends Migration
             $table->float('price_medium' , 8, 2);
             $table->float('price_large', 8, 2);
             $table->timestamps();
-            $table->foreign('pizza_id')->references('id')->on('menu_items');
+            $table->foreign('pizza_id')->references('id')->on('pizzas');
 
         });
     }
