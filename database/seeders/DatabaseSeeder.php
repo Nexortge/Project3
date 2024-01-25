@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Quattro Formaggi',
-                'image_path' => 'https://images.newyorkpizza.nl/Products/Original/Quattro-Formaggi-9587.png',
+                'image_path' => 'https://images.newyorkpizza.nl/Products/Original/4_cheese_-9594.png',
             ],
             [
                 'name' => 'Chicken BBQ',
@@ -87,5 +87,13 @@ class DatabaseSeeder extends Seeder
             ['pizza_id' => 5, 'ingredient_id' => 8, 'quantity' => 100], // Hawaiian with 100g Pineapple
             ['pizza_id' => 5, 'ingredient_id' => 9, 'quantity' => 50], // Hawaiian with 50g Onions
             ]);
+
+        DB::table('pizza_prices')->insert([
+            ['pizza_id' => 1, 'price_small' => 5.99, 'price_medium' => 7.99, 'price_large' => 9.99],
+            ['pizza_id' => 2, 'price_small' => 6.99, 'price_medium' => 8.99, 'price_large' => 10.99],
+            ['pizza_id' => 3, 'price_small' => 7.99, 'price_medium' => 9.99, 'price_large' => 11.99],
+            ['pizza_id' => 4, 'price_small' => 8.99, 'price_medium' => 10.99, 'price_large' => 12.99],
+            ['pizza_id' => 5, 'price_small' => 9.99, 'price_medium' => 11.99, 'price_large' => 13.99],
+        ]);
     }
 }

@@ -33,3 +33,4 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [MenuController::class, 'index'])->name('index');
 Route::get('/menu', [MenuController::class, 'show'])->name('menu');
+Route::get('/menu/order', [MenuController::class, 'order'])->name('order');

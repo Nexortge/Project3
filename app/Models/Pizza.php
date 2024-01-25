@@ -13,4 +13,9 @@ class Pizza extends Model
     {
         return $this->belongsToMany(Ingredient::class, 'pizza_ingredients')->withPivot('quantity');
     }
+
+    public function pizzaPrice()
+    {
+        return $this->hasOne(PizzaPrice::class, 'pizza_id');
+    }
 }

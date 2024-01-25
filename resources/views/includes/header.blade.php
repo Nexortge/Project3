@@ -1,5 +1,7 @@
 <div class="flex h-40 bg-red-400 justify-between items-center">
-    <img class="h-full" src="{{asset('assets/stonks-pizza-removebg-preview.png')}}" alt="LOGO">
+    <a href="/" class="h-full">
+        <img class="h-full" src="{{asset('assets/stonks-pizza-removebg-preview.png')}}" alt="LOGO">
+    </a>
     <p class=" text-xl w-[128vmin] sm:text-7xl text-center text-orange-200">Stonks Pizza</p>
     <a href="https://google.nl" class="w-48 flex flex-col items-center">
         <svg width="56" height="60" viewBox="0 0 56 60" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -9,27 +9,27 @@
     </head>
     <body class="comic-sans bg-yellow-50">
     @include('includes.header')
-    <div class="flex flex-row-reverse">
-        <div class="absolute bg-orange-300 w-[196vmin] h-[60vmin] z-10 self-center right-12 rounded text-red-400">
-            <div class="p-4 flex flex-col">
-                <div class="w-[60vmin] h-[50vmin] relative">
-                    <img class="w-[25vmin] h-[25vmin] left-[15vmin] top-0 absolute" src="{{$pizza->image_path}}" />
-                    <img class="w-[25vmin] h-[25vmin] left-[65vmin] top-0 absolute" src="https://via.placeholder.com/279x256" />
-                    <img class="w-[25vmin] h-[25vmin] left-[110vmin] top-0 absolute" src="https://via.placeholder.com/247x256" />
-                    <img class="w-[25vmin] h-[25vmin] left-[155vmin] top-0 absolute" src="https://via.placeholder.com/276x256" />
-                    <div class="left-[20vmin] top-[279px] absolute"><span style="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Pepperoni<br/></span><span style="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh meat!<br/></span><span style="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span></div>
-                    <div class="w-[182.63px] h-[167px] left-[70vmin] top-[279px] absolute"><span style="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Green stuff<br/></span><span style="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh green stuff!<br/></span><span style="text-red-400 text-xl font-bold font-['Comic Sans MS']">20.00 eur</span></div>
-                    <div class="w-[182.63px] left-[115vmin] top-[285px] absolute"><span style="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Mark<br/></span><span style="text-red-400 text-xl font-normal font-['Comic Sans MS']">King of the nether!<br/></span><span style="text-red-400 text-xl font-bold font-['Comic Sans MS']">19000.00 eur</span></div>
-                    <div class="w-[182.63px] left-[160vmin] top-[285px] absolute"><span style="text-red-400 text-[32px] font-bold font-['Comic Sans MS']">Dough ball<br/></span><span style="text-red-400 text-xl font-normal font-['Comic Sans MS']">With fresh dough!<br/></span><span style="text-red-400 text-xl font-bold font-['Comic Sans MS']">8.00 eur</span></div>
+
+    <div class="bg-orange-200 flex justify-around flex-wrap p-2">
+        @foreach($pizzas as $pizza)
+            <div class="w-80 bg-yellow-50 h-[50vmin] flex flex-col justify-center m-2">
+                <img class="self-center h-60" src="{{$pizza->image_path}}" alt="balza">
+                <div class="p-3 flex gap-9">
+                    <p class="text-2xl">{{$pizza->name}}</p>
+                    <form class="text-sm w-4/5 h-4/5" action="https://google.com">
+                        <input type="hidden" value="{{$pizza->id}}">
+                        <select name="pepperoni" id="pepperoni">
+=                           <option value="1">Small ${{$pizza->pizzaPrice->price_small}}</option>
+                            <option value="2">Medium ${{$pizza->pizzaPrice->price_medium}}</option>s
+                            <option value="3">Large ${{$pizza->pizzaPrice->price_large}}</option>
+                        </select>
+                        <button class="bg-red-400 hover:bg-red-500 text-yellow-50 relative left-[-6vmin] top-2 font-bold py-2 px-4 rounded">Add to cart</button>
+                    </form>
                 </div>
             </div>
-        </div>
-        <div class="object-cover h-[65vmin] w-full bg-orange-200">
-        </div>
+        @endforeach
 
     </div>
-
-
     @include('includes.footer')
     </body>
 </html>

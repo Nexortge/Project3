@@ -15,9 +15,8 @@ class MenuController extends Controller
 
     public function show()
     {
-        $pizza = Pizza::all();
-//        dd($pizza);
-        return view('menu', ['pizza' => $pizza]);
+        $pizzas = Pizza::all();
+        return view('menu', ['pizzas' => $pizzas]);
     }
 
     public function create()
