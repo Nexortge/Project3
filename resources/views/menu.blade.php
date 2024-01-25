@@ -16,12 +16,14 @@
                 <img class="self-center h-60" src="{{$pizza->image_path}}" alt="balza">
                 <div class="p-3 flex gap-9">
                     <p class="text-2xl">{{$pizza->name}}</p>
-                    <form class="text-sm w-4/5 h-4/5" action="https://google.com">
-                        <input type="hidden" value="{{$pizza->id}}">
-                        <select name="pepperoni" id="pepperoni">
-=                           <option value="1">Small ${{$pizza->pizzaPrice->price_small}}</option>
-                            <option value="2">Medium ${{$pizza->pizzaPrice->price_medium}}</option>s
-                            <option value="3">Large ${{$pizza->pizzaPrice->price_large}}</option>
+                    <form class="text-sm w-4/5 h-4/5" method="POST"  action="{{ route('addToOrder')}}">
+                        @csrf
+
+                        <input type="hidden" name="pizza_id" value="{{$pizza->id}}">
+                        <select name="size" id="size">
+=                           <option value="price_small">Small ${{$pizza->pizzaPrice->price_small}}</option>
+                            <option value="price_medium">Medium ${{$pizza->pizzaPrice->price_medium}}</option>s
+                            <option value="price_large">Large ${{$pizza->pizzaPrice->price_large}}</option>
                         </select>
                         <button class="bg-red-400 hover:bg-red-500 text-yellow-50 relative left-[-6vmin] top-2 font-bold py-2 px-4 rounded">Add to cart</button>
                     </form>

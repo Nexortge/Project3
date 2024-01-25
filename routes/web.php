@@ -34,3 +34,5 @@ require __DIR__.'/auth.php';
 Route::get('/', [MenuController::class, 'index'])->name('index');
 Route::get('/menu', [MenuController::class, 'show'])->name('menu');
 Route::get('/menu/order', [MenuController::class, 'order'])->name('order');
+Route::post('/menu/', [MenuController::class, 'addToOrder'])->name('addToOrder');
+Route::post('/menu/remove', [MenuController::class, 'removeFromOrder'])->name('removeFromOrder');
