@@ -95,5 +95,9 @@ class DatabaseSeeder extends Seeder
             ['pizza_id' => 4, 'price_small' => 8.99, 'price_medium' => 10.99, 'price_large' => 12.99],
             ['pizza_id' => 5, 'price_small' => 9.99, 'price_medium' => 11.99, 'price_large' => 13.99],
         ]);
+
+        DB::table('users')->insert([
+            ['name' => 'a', 'email' => 'a@a.a', 'password' => '12345678',]
+        ]);
     }
 }

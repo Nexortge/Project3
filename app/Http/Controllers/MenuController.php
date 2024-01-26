@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pizza;
 use App\Models\Ingredient;
+use App\Models\Order;
+use App\Models\OrderItem;
 
 class MenuController extends Controller
 {
@@ -91,16 +93,33 @@ class MenuController extends Controller
         $size = $request->input('size');
         $cart = session()->get('cart', []);
         $existingItemIndex = $this->findCartItemIndex($cart, $pizzaId, $size);
-        if($existingItemIndex !== null) {
+        if ($existingItemIndex !== null) {
             $cart[$existingItemIndex]['quantity']--;
-            if($cart[$existingItemIndex]['quantity'] == 0) {
+            if ($cart[$existingItemIndex]['quantity'] == 0) {
                 unset($cart[$existingItemIndex]);
             }
             session()->put('cart', $cart);
             return redirect()->back();
-        }
-        else {
+        } else {
             return redirect()->back();
         }
     }
+
+    public function placeOrder(Request $request)
+    {
+        $cart = session()->get('cart', []);
+        $order = new Order();
+        $order->save();
+        foreach ($cart as $item) {
+            $orderItem = new OrderItem();
+            $orderItem->order_id = $order->id;
+            $orderItem->pizza_id = $item['pizzaId'];
+            $orderItem->size = $item['size'];
+            $orderItem->quantity = $item['quantity'];
+            $orderItem->save();
+        }
+        session()->forget('cart');
+        return redirect()->route('index');
+    }
+
 }

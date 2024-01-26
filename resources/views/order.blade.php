@@ -49,7 +49,7 @@
             <p>{{$total}}</p>
         </div>
 
-        <form action="{{ route('order') }}" method="POST" class="flex flex-col items-center space-y-2 w-[90%] max-w-lg">
+        <form action="{{ route('placeOrder') }}" method="POST" class="flex flex-col items-center space-y-2 w-[90%] max-w-lg">
             @csrf
             <label for="name" class="font-bold">Name:</label>
             <input type="text" name="name" id="name" class="border border-gray-300 rounded-md p-2">
