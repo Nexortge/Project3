@@ -42,6 +42,8 @@ Route::get('/menu/order', [MenuController::class, 'order'])->name('order');
 Route::post('/menu/', [MenuController::class, 'addToOrder'])->name('addToOrder');
 Route::post('/menu/remove', [MenuController::class, 'removeFromOrder'])->name('removeFromOrder');
 Route::post('/menu/order/place', [MenuController::class, 'placeOrder'])->name('placeOrder');
+Route::get('/menu/order/status/{order_id}', [MenuController::class, 'status'])->name('status');
+Route::post('/menu/order/status/cancel', [MenuController::class, 'cancelOrder'])->name('cancelOrder');
 
 
 //
@@ -54,6 +56,7 @@ Route::get('employee/', [App\Http\Controllers\EmployeeController::class, 'index'
 Route::get('employee/orders', [App\Http\Controllers\EmployeeController::class, 'orders'])->name('employeeOrders')->middleware('auth');
 Route::post('employee/orders/complete', [App\Http\Controllers\EmployeeController::class, 'completeOrder'])->name('completeOrder')->middleware('auth');
 Route::post('employee/orders/remove', [App\Http\Controllers\EmployeeController::class, 'removeOrder'])->name('removeOrder')->middleware('auth');
+
 
 
 

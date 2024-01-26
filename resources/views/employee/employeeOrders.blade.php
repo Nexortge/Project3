@@ -15,7 +15,6 @@
                 $(this).find('.arrow').toggleClass('rotate-180');
             });
         });
-
     </script>
 
     <style>

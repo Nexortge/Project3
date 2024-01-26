@@ -119,7 +119,24 @@ class MenuController extends Controller
             $orderItem->save();
         }
         session()->forget('cart');
-        return redirect()->route('index');
+        session()->put('order_id', $order->id);
+        return redirect()->route('status', ['order_id' => $order->id]);
+    }
+
+    public function status($order_id)
+    {
+        $order = Order::all();
+        $pizza = Pizza::all();
+        $order = $order->where('id', $order_id)->first();
+        return view('status', ['order' => $order, 'pizza' => $pizza]);
+    }
+
+    public function cancelOrder(Request $request)
+    {
+        $order = Order::find($request->order_id);
+        $order->status = 'cancelled';
+        $order->save();
+        return redirect()->route('status', ['order_id' => $order->id]);
     }
 
 }

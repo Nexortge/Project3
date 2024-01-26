@@ -9,7 +9,6 @@
     </head>
     <body class="comic-sans bg-yellow-50">
     @include('includes.header')
-
     <div class="bg-orange-200 flex justify-around flex-wrap p-2">
         @foreach($pizzas as $pizza)
             <div class="w-80 bg-yellow-50 h-[50vmin] flex flex-col justify-center m-2">
@@ -18,7 +17,6 @@
                     <p class="text-2xl">{{$pizza->name}}</p>
                     <form class="text-sm w-4/5 h-4/5" method="POST"  action="{{ route('addToOrder')}}">
                         @csrf
-
                         <input type="hidden" name="pizza_id" value="{{$pizza->id}}">
                         <select name="size" id="size">
 =                           <option value="price_small">Small ${{$pizza->pizzaPrice->price_small}}</option>
@@ -30,7 +28,6 @@
                 </div>
             </div>
         @endforeach
-
     </div>
     @include('includes.footer')
     </body>

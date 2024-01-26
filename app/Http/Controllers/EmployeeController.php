@@ -13,6 +13,7 @@ class EmployeeController extends Controller
     {
         $orderAmount = Order::count();
         $orderAmount = $orderAmount - Order::where('status', 'completed')->count();
+        $orderAmount = $orderAmount - Order::where('status', 'cancelled')->count();
         return view('employee/employeeIndex', ['orderAmount' => $orderAmount]);
     }
 
@@ -27,7 +28,7 @@ class EmployeeController extends Controller
     public function completeOrder(Request $request)
     {
         $order = Order::find($request->order_id);
-        $order->status = 'completed';
+        $order->status = 'completed and is ready for pickup';
         $order->save();
         return redirect()->route('employeeOrders');
     }
@@ -35,7 +36,8 @@ class EmployeeController extends Controller
     public function removeOrder(Request $request)
     {
         $order = Order::find($request->order_id);
-        $order->delete();
+        $order->status = 'cancelled';
+        $order->save();
         return redirect()->route('employeeOrders');
     }
 }
