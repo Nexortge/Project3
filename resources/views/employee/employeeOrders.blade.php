@@ -58,17 +58,30 @@
                 <input class="checkbox" id="orderItem{{$orderItem->id}}" type="checkbox">
             </div>
         @endforeach
-
+         <p>Order status: {{$item->status}}</p>
         <div class="flex p-4 gap-4">
-            <form action="{{route('removeOrder')}}" method="POST">
+
+            <form action="{{ route('nextStatus')}}" method="POST">
                 @csrf
                 <input type="hidden" name="order_id" value="{{$item->id}}">
-                <button class="p-4 bg-red-500 text-white">Remove Order</button>
+                <button class="p-4 bg-cyan-500 text-white">NextStatus</button>
             </form>
+            <form action="{{ route('previousStatus')}}" method="POST">
+                @csrf
+                <input type="hidden" name="order_id" value="{{$item->id}}">
+                <button class="p-4 bg-orange-500 text-white">PreviousStatus</button>
+            </form>
+            <br>
+
             <form action="{{ route('completeOrder')}}" method="POST">
                 @csrf
                 <input type="hidden" name="order_id" value="{{$item->id}}">
                 <button class="p-4 bg-green-500 text-white">Complete Order</button>
+            </form>
+            <form action="{{route('removeOrder')}}" method="POST">
+                @csrf
+                <input type="hidden" name="order_id" value="{{$item->id}}">
+                <button class="p-4 bg-red-500 text-white">Remove Order</button>
             </form>
         </div>
 

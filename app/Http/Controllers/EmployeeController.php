@@ -12,7 +12,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $orderAmount = Order::count();
-        $orderAmount = $orderAmount - Order::where('status', 'completed')->count();
+        $orderAmount = $orderAmount - Order::where('status', 'completed and is ready for pickup')->count();
         $orderAmount = $orderAmount - Order::where('status', 'cancelled')->count();
         return view('employee/employeeIndex', ['orderAmount' => $orderAmount]);
     }
@@ -21,7 +21,8 @@ class EmployeeController extends Controller
     {
         $pizzas = Pizza::all();
         $orders = Order::all();
-        $orders = $orders->where('status', '==', 'preparing');
+        $orders = $orders->where('status', '!=', 'completed and is ready for pickup');
+        $orders = $orders->where('status', '!=', 'cancelled');
         return view('employee/employeeOrders', ['orders' => $orders, 'pizzas' => $pizzas]);
     }
 
@@ -39,5 +40,75 @@ class EmployeeController extends Controller
         $order->status = 'cancelled';
         $order->save();
         return redirect()->route('employeeOrders');
+    }
+
+    public function NextStatus(request $request)
+    {
+        $pizzas = Pizza::all();
+        $order = Order::find($request->order_id);
+        switch ($order->status){
+            case 'preparing':
+                $order = Order::find($request->order_id);
+                $order->status = 'in oven';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'in oven':
+                $order = Order::find($request->order_id);
+                $order->status = 'baked';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'baked':
+                $order = Order::find($request->order_id);
+                $order->status = 'ready for delivery';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'ready for delivery':
+                $order = Order::find($request->order_id);
+                $order->status = 'preparing';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            default:
+                return redirect()->route('employeeOrders');
+                break;
+
+        }
+    }
+    public function PreviousStatus(request $request)
+    {
+        $pizzas = Pizza::all();
+        $order = Order::find($request->order_id);
+        switch ($order->status){
+            case 'preparing':
+                $order = Order::find($request->order_id);
+                $order->status = 'ready for delivery';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'in oven':
+                $order = Order::find($request->order_id);
+                $order->status = 'preparing';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'baked':
+                $order = Order::find($request->order_id);
+                $order->status = 'in oven';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            case 'ready for delivery':
+                $order = Order::find($request->order_id);
+                $order->status = 'baked';
+                $order->save();
+                return redirect()->route('employeeOrders');
+                break;
+            default:
+                return redirect()->route('employeeOrders');
+                break;
+        }
     }
 }

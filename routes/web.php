@@ -56,6 +56,9 @@ Route::get('employee/', [App\Http\Controllers\EmployeeController::class, 'index'
 Route::get('employee/orders', [App\Http\Controllers\EmployeeController::class, 'orders'])->name('employeeOrders')->middleware('auth');
 Route::post('employee/orders/complete', [App\Http\Controllers\EmployeeController::class, 'completeOrder'])->name('completeOrder')->middleware('auth');
 Route::post('employee/orders/remove', [App\Http\Controllers\EmployeeController::class, 'removeOrder'])->name('removeOrder')->middleware('auth');
+Route::post('employee/orders/nextStatus', [App\Http\Controllers\EmployeeController::class, 'nextStatus'])->name('nextStatus')->middleware('auth');
+Route::post('employee/orders/previousStatus', [App\Http\Controllers\EmployeeController::class, 'previousStatus'])->name('previousStatus')->middleware('auth');
+
 
 
 
